@@ -9,3 +9,10 @@ router = Router()
 @router.message(Command("start"))
 async def cmd_start(message: Message):
     await message.answer("Привет, Я Echo Bot 🤖")
+
+
+@router.message(Command("help"))
+async def cmd_help(message: Message):
+    await message.answer(
+        "Доступные команды: \n\n/start - запустить бота \n/help - показать справку"
+    )
